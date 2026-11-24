@@ -1,0 +1,17 @@
+Biblioteca al finalizar la clase 4
+El directorio src del frontend coincide con la guía del estudiante.
+
+Terminal 1, desde backend:
+  mvn spring-boot:run
+Comprueba http://localhost:8080/api/books.
+
+Terminal 2, desde frontend:
+  npm ci
+  npm run dev
+Abre http://localhost:5173 para usar el origen autorizado por CORS.
+Si quieres compilar, ejecuta npm run build desde frontend.
+
+El archivo frontend/.env.local apunta a http://localhost:8080/api.
+Para restaurarlo, copia frontend/.env.example a frontend/.env.local.
+Para EC2, configura VITE_API_URL=/api en .env.production.local y vuelve a compilar.
+Requisitos de referencia del checkpoint: Java 21, Maven y Node 22.12+ en la rama 22.
