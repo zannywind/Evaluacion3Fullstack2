@@ -50,6 +50,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/api/v1/boletas/**").hasAnyRole("ADMIN", "VENDEDOR")
                 .requestMatchers(HttpMethod.POST, "/api/v1/boletas/**").hasAnyRole("CLIENTE", "VENDEDOR", "ADMIN")
                 // Todo lo demás requiere estar autenticado
+                .requestMatchers("/api/books/**").permitAll()
                 .anyRequest().authenticated()
             )
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
